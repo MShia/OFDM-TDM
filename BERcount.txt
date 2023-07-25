@@ -1,0 +1,10 @@
+    //Compute the Bit Error Rate 
+    int BERcount = 0;
+    for (int i=0; i < 2*Nc; i++){
+        
+        if (demodulatedData[i] != InputArray[i]){
+            BERcount++; 
+        }
+    }
+    double BER = (double) BERcount / (2*Nc) ;   
+    printf(" \n The BER Count is %d: ", BERcount); 
